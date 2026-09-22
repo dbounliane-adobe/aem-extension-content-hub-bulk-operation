@@ -1,0 +1,8 @@
+# Browse View extension point (aem/assets/browse/1).
+# The SPA registers the browse methods (actionBar + quickActions) at the
+# #/register/browse hash route.
+operations:
+  view:
+    - type: web
+      impl: index.html#/register/browse
+web: web-src

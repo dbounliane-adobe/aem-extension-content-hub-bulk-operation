@@ -1,0 +1,39 @@
+extensions:
+  aem/assets/browse/1:
+    $include: src/aem-assets-assetsview-1/ext.config.yaml
+application:
+  actions: actions
+  web: web-src
+  runtimeManifest:
+    packages:
+      dbounliane-contenthub-ext:
+        license: Apache-2.0
+        actions:
+          generic:
+            function: actions/generic/index.js
+            web: 'yes'
+            runtime: nodejs:22
+            inputs:
+              LOG_LEVEL: debug
+            annotations:
+              require-adobe-auth: true
+              final: true
+          publish-events:
+            function: actions/publish-events/index.js
+            web: 'yes'
+            runtime: nodejs:22
+            inputs:
+              LOG_LEVEL: debug
+              apiKey: $SERVICE_API_KEY
+            annotations:
+              require-adobe-auth: true
+              final: true
+          contenthub:
+            function: actions/contenthub/index.js
+            web: 'yes'
+            runtime: nodejs:22
+            inputs:
+              LOG_LEVEL: debug
+            annotations:
+              require-adobe-auth: true
+              final: true
