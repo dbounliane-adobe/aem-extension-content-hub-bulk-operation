@@ -1,0 +1,20 @@
+{
+  "alloworigin": ["https://experience.adobe.com"],
+  "alloworiginregexp": [
+    "https://localhost:9080",
+    "https://.*\\.adobeio-static\\.net"
+  ],
+  "allowedpaths": ["/content/dam/.*\\.contenthub\\.json"],
+  "supportedheaders": [
+    "Authorization",
+    "Origin",
+    "Accept",
+    "X-Requested-With",
+    "Content-Type",
+    "Access-Control-Request-Method",
+    "Access-Control-Request-Headers"
+  ],
+  "supportedmethods": ["GET", "HEAD", "POST", "OPTIONS"],
+  "supportscredentials": false,
+  "maxage:Integer": 1800
+}

@@ -1,0 +1,9 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/dbounliane",
+        "create path (nt:unstructured) /content/dam/dbounliane/jcr:content",
+        "set properties on /content/dam/dbounliane/jcr:content\n  set cq:conf{String} to /conf/dbounliane\n  set jcr:title{String} to \"dbounliane\"\nend",
+        "create service user dbounliane-contenthub-service with path system/dbounliane",
+        "set ACL for dbounliane-contenthub-service\n  allow jcr:read,rep:write on /content/dam\nend"
+    ]
+}
